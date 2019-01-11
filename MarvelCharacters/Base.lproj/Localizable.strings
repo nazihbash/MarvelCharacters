@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  MarvelCharacters
+
+  Created by Nazih on 1/9/19.
+  Copyright © 2019 Nazih Bash. All rights reserved.
+*/
+
+"common.ok" = "OK";
+"common.retry" = "Retry";
+"common.close" = "Close";
+"common.update" = "Update";
+"common.update" = "Update";
+
+// errors
+"error.default" = "An error has occurred please try again.";
+"error.title" = "Error!";
+
+"title.list" = "Marvel Characters";
+// network dialog
+"dialog.nonetwork" = "No Internet Connection";
+"dialog.turnonwifi" = "Please make sure that Wi-Fi or mobile data is turned on, then try again.";
