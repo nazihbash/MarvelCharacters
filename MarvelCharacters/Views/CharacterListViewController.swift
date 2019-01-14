@@ -66,7 +66,7 @@ extension CharacterListViewController: UITableViewDelegate, UITableViewDataSourc
         let displayedCount = viewModel.characterListMap.value.characters.count
         if indexPath.row + 1 == displayedCount {
             if displayedCount < viewModel.characterListMap.value.total {
-                if !viewModel.fetchCharacterAction.isExecuting.value {
+                if !viewModel.fetchCharacterAction.isExecuting.value && !viewModel.isFetchingFromDB {
                     viewModel.characterListMap.value.offset += Constants.characterPageLimit
                     viewModel.fetchMoreCharacters()
                     

@@ -33,6 +33,8 @@ class NetworkServiceManager: NSObject {
             let request = ServiceManager.fetchCharacters(limit: limit, offset: offset)
             self?.sessionManager.request(request).debugLog().responseObject(completionHandler: { (response: DataResponse<BaseMap<CharacterListMap>>) in
                 if let value = response.value, let data = value.data {
+                    UserDefaults.standard.totalCharacters = data.total
+                    CharactersDataManager.sharedInstance.updateCharacters(characters: data.characters)
                     data.characters = characterListMap.characters + data.characters
                     observer.send(value: data)
                     observer.sendCompleted()

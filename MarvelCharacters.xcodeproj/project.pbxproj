@@ -40,8 +40,12 @@
 		9A3E17D421E8C0C5004CB826 /* WikiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3E17D321E8C0C5004CB826 /* WikiViewController.swift */; };
 		9A3E17D821E8C817004CB826 /* loading-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A3E17D721E8C817004CB826 /* loading-animation.json */; };
 		9A3E17DA21E8C8AF004CB826 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3E17D921E8C8AF004CB826 /* RealmHelper.swift */; };
-		9A3E17DD21E8C8E2004CB826 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3E17DC21E8C8E2004CB826 /* DataManager.swift */; };
+		9A3E17DD21E8C8E2004CB826 /* CharactersDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3E17DC21E8C8E2004CB826 /* CharactersDataManager.swift */; };
 		9A3E17DF21E8CECD004CB826 /* ApplicationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3E17DE21E8CECD004CB826 /* ApplicationHelper.swift */; };
+		9A3E17E121E8E416004CB826 /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3E17E021E8E416004CB826 /* UserDefaults+Extensions.swift */; };
+		9A3E17E621E8E66C004CB826 /* Locale+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3E17E421E8E66C004CB826 /* Locale+Extensions.swift */; };
+		9A3E17E721E8E66C004CB826 /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3E17E521E8E66C004CB826 /* DateFormatter+Extensions.swift */; };
+		9A3E17E921E8E815004CB826 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3E17E821E8E815004CB826 /* Date+Extensions.swift */; };
 		AADE705BCB29492C80958AE5 /* Pods_MarvelCharactersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D753A9BFAB9A9B1B42BF256 /* Pods_MarvelCharactersUITests.framework */; };
 		EC29639F4AB897C3A0BBA92A /* Pods_MarvelCharactersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29CE4AAC6427C646CC38EADB /* Pods_MarvelCharactersTests.framework */; };
 /* End PBXBuildFile section */
@@ -108,8 +112,12 @@
 		9A3E17D321E8C0C5004CB826 /* WikiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiViewController.swift; sourceTree = "<group>"; };
 		9A3E17D721E8C817004CB826 /* loading-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "loading-animation.json"; sourceTree = "<group>"; };
 		9A3E17D921E8C8AF004CB826 /* RealmHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
-		9A3E17DC21E8C8E2004CB826 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		9A3E17DC21E8C8E2004CB826 /* CharactersDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersDataManager.swift; sourceTree = "<group>"; };
 		9A3E17DE21E8CECD004CB826 /* ApplicationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationHelper.swift; sourceTree = "<group>"; };
+		9A3E17E021E8E416004CB826 /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
+		9A3E17E421E8E66C004CB826 /* Locale+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Locale+Extensions.swift"; sourceTree = "<group>"; };
+		9A3E17E521E8E66C004CB826 /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
+		9A3E17E821E8E815004CB826 /* Date+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		AEF8E667E96D1F4F42F48AF2 /* Pods-MarvelCharactersUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelCharactersUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelCharactersUITests/Pods-MarvelCharactersUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BB3B931AF8A16B3EE461908A /* Pods-MarvelCharactersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelCharactersTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelCharactersTests/Pods-MarvelCharactersTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FEB3348CCC2C9F843F8D1D8A /* Pods-MarvelCharactersUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelCharactersUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelCharactersUITests/Pods-MarvelCharactersUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -180,12 +188,12 @@
 			children = (
 				9A28365521E4F65F00C690B5 /* Services */,
 				9A28366B21E601E900C690B5 /* Helpers */,
+				9A3E17DB21E8C8CD004CB826 /* Data */,
 				9A28366221E5FAAE00C690B5 /* Extensions */,
 				9A28368721E644C400C690B5 /* CustomViews */,
 				9A28365421E4F5A900C690B5 /* Views */,
 				9A28365321E4F5A300C690B5 /* ViewModels */,
 				9A28365221E4F59B00C690B5 /* Models */,
-				9A3E17DB21E8C8CD004CB826 /* Data */,
 				9A28365E21E5F5AC00C690B5 /* Constants.swift */,
 				9A28362421E4DB4700C690B5 /* AppDelegate.swift */,
 				9A28367721E63DA300C690B5 /* Localizable.strings */,
@@ -238,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				9A28362821E4DB4700C690B5 /* Main.storyboard */,
+				9A28366C21E601FA00C690B5 /* BaseViewController.swift */,
 				9A28362621E4DB4700C690B5 /* CharacterListViewController.swift */,
 				9A28369421E7795300C690B5 /* CharacterCell.swift */,
 				9A28369821E8B1B700C690B5 /* CharacterDetailViewController.swift */,
@@ -265,6 +274,10 @@
 				9A28366E21E6180200C690B5 /* String+Extensions.swift */,
 				9A28367F21E63FF100C690B5 /* UIAlertViewController+Extensions.swift */,
 				9A28368121E6410100C690B5 /* UIViewController+Extensions.swift */,
+				9A3E17E021E8E416004CB826 /* UserDefaults+Extensions.swift */,
+				9A3E17E521E8E66C004CB826 /* DateFormatter+Extensions.swift */,
+				9A3E17E821E8E815004CB826 /* Date+Extensions.swift */,
+				9A3E17E421E8E66C004CB826 /* Locale+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -274,7 +287,6 @@
 			children = (
 				9A28368521E6445500C690B5 /* ProgressAnimationHelper.swift */,
 				9A28367221E63B7800C690B5 /* NetworkReachabilityHelper.swift */,
-				9A28366C21E601FA00C690B5 /* BaseViewController.swift */,
 				9A3E17DE21E8CECD004CB826 /* ApplicationHelper.swift */,
 			);
 			path = Helpers;
@@ -292,7 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				9A3E17D921E8C8AF004CB826 /* RealmHelper.swift */,
-				9A3E17DC21E8C8E2004CB826 /* DataManager.swift */,
+				9A3E17DC21E8C8E2004CB826 /* CharactersDataManager.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -549,15 +561,18 @@
 				9A28366F21E6180200C690B5 /* String+Extensions.swift in Sources */,
 				9A28365D21E5F58600C690B5 /* NetworkServiceManager.swift in Sources */,
 				9A28368B21E6450600C690B5 /* UIViewExtensions.swift in Sources */,
+				9A3E17E921E8E815004CB826 /* Date+Extensions.swift in Sources */,
+				9A3E17E721E8E66C004CB826 /* DateFormatter+Extensions.swift in Sources */,
 				9A28368621E6445500C690B5 /* ProgressAnimationHelper.swift in Sources */,
 				9A28368221E6410100C690B5 /* UIViewController+Extensions.swift in Sources */,
 				9A28366121E5F70900C690B5 /* ServiceManager.swift in Sources */,
-				9A3E17DD21E8C8E2004CB826 /* DataManager.swift in Sources */,
+				9A3E17DD21E8C8E2004CB826 /* CharactersDataManager.swift in Sources */,
 				9A3E17DA21E8C8AF004CB826 /* RealmHelper.swift in Sources */,
 				9A28367321E63B7800C690B5 /* NetworkReachabilityHelper.swift in Sources */,
 				9A28362721E4DB4700C690B5 /* CharacterListViewController.swift in Sources */,
 				9A28366D21E601FA00C690B5 /* BaseViewController.swift in Sources */,
 				9A28366621E5FB3800C690B5 /* ServiceResponseError.swift in Sources */,
+				9A3E17E121E8E416004CB826 /* UserDefaults+Extensions.swift in Sources */,
 				9A28365F21E5F5AC00C690B5 /* Constants.swift in Sources */,
 				9A28366821E5FB4500C690B5 /* ServiceResponseStatus.swift in Sources */,
 				9A28369721E8B0B400C690B5 /* CharacterDetailViewModel.swift in Sources */,
@@ -567,6 +582,7 @@
 				9A28366421E5FB0600C690B5 /* Alamofire+Extensions.swift in Sources */,
 				9A3E17D421E8C0C5004CB826 /* WikiViewController.swift in Sources */,
 				9A28362521E4DB4700C690B5 /* AppDelegate.swift in Sources */,
+				9A3E17E621E8E66C004CB826 /* Locale+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

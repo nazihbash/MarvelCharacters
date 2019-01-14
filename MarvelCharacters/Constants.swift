@@ -13,4 +13,8 @@ struct Constants {
     static let publicApiKey = "f971fc5cb921036c6c40587d679b85ad"
     static let privateApiKey = "4aef6aeeb34bc46d828766d915931467aead6d6c"
     static let characterPageLimit = 30
+
+    struct Locale {
+        static let enUSPosix = "en_US_POSIX"
+    }
 }

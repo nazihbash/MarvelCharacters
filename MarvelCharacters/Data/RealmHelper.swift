@@ -1,12 +1,12 @@
 import Foundation
 import RealmSwift
 
-class RealmHelper {
+class RealmHelper: NSObject {
 
     let realm: Realm
-    static let shared = RealmHelper()
+    static let sharedInstance = RealmHelper()
 
-    private init() {
+    private override init() {
         let config = Realm.Configuration(
             schemaVersion: 0,
             deleteRealmIfMigrationNeeded: true
@@ -66,6 +66,16 @@ class RealmHelper {
                 if let items = items {
                     realm.delete(items)
                 }
+            }
+        } catch {
+            print(" REALM ERROR: \(error)")
+        }
+    }
+    func deleteAll() {
+        do {
+            try realm.write {
+                let alreadySeen = realm.objects(MarvelCharacter.self)
+                realm.delete(alreadySeen)
             }
         } catch {
             print(" REALM ERROR: \(error)")
