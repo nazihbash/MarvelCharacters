@@ -109,16 +109,22 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o3E-rA-cDk">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="414"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dPc-YS-Spj">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2GM-Tr-2aJ" customClass="EFImageViewZoom" customModule="MarvelCharacters" customModuleProvider="target">
                                                 <rect key="frame" x="87.5" y="25" width="200" height="200"/>
-                                                <accessibility key="accessibilityConfiguration">
-                                                    <bool key="isElement" value="YES"/>
-                                                </accessibility>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="200" id="T5F-ZI-mo0"/>
-                                                    <constraint firstAttribute="width" constant="200" id="tA1-6n-0p2"/>
+                                                    <constraint firstAttribute="width" constant="200" id="3PD-5Q-hmj"/>
+                                                    <constraint firstAttribute="height" constant="200" id="q7j-Pd-DOg"/>
                                                 </constraints>
-                                            </imageView>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="_minimumZoomScale">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="_maximumZoomScale">
+                                                        <real key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dud-2n-7qc">
                                                 <rect key="frame" x="20" y="250" width="335" height="25.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
@@ -143,15 +149,15 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="dud-2n-7qc" secondAttribute="trailing" constant="20" id="4hS-NS-Anb"/>
+                                            <constraint firstItem="2GM-Tr-2aJ" firstAttribute="top" secondItem="o3E-rA-cDk" secondAttribute="top" constant="25" id="Jak-kh-LrW"/>
                                             <constraint firstItem="7Lh-SJ-2ss" firstAttribute="top" secondItem="dud-2n-7qc" secondAttribute="bottom" constant="10" id="OHW-p9-K9u"/>
                                             <constraint firstItem="mYd-Gr-LBy" firstAttribute="centerX" secondItem="o3E-rA-cDk" secondAttribute="centerX" id="Shr-nw-vzh"/>
                                             <constraint firstItem="dud-2n-7qc" firstAttribute="leading" secondItem="o3E-rA-cDk" secondAttribute="leading" constant="20" id="ZbU-Rr-8Hx"/>
                                             <constraint firstAttribute="bottom" secondItem="mYd-Gr-LBy" secondAttribute="bottom" constant="50" id="agZ-xG-F8f"/>
-                                            <constraint firstItem="dPc-YS-Spj" firstAttribute="centerX" secondItem="o3E-rA-cDk" secondAttribute="centerX" id="f5Q-5Z-RYR"/>
-                                            <constraint firstItem="dud-2n-7qc" firstAttribute="top" secondItem="dPc-YS-Spj" secondAttribute="bottom" constant="25" id="h5I-Gl-W6i"/>
                                             <constraint firstItem="7Lh-SJ-2ss" firstAttribute="leading" secondItem="dud-2n-7qc" secondAttribute="leading" id="i2K-Wl-Xq1"/>
-                                            <constraint firstItem="dPc-YS-Spj" firstAttribute="top" secondItem="o3E-rA-cDk" secondAttribute="top" constant="25" id="im9-uW-Kg5"/>
                                             <constraint firstItem="7Lh-SJ-2ss" firstAttribute="trailing" secondItem="dud-2n-7qc" secondAttribute="trailing" id="mh0-qf-L5e"/>
+                                            <constraint firstItem="2GM-Tr-2aJ" firstAttribute="centerX" secondItem="o3E-rA-cDk" secondAttribute="centerX" id="uQf-vN-zFV"/>
+                                            <constraint firstItem="dud-2n-7qc" firstAttribute="top" secondItem="2GM-Tr-2aJ" secondAttribute="bottom" constant="25" id="wbC-AF-UZR"/>
                                             <constraint firstItem="mYd-Gr-LBy" firstAttribute="top" secondItem="7Lh-SJ-2ss" secondAttribute="bottom" constant="25" id="xGq-aT-iQ4"/>
                                         </constraints>
                                     </view>
@@ -175,8 +181,9 @@
                         <viewLayoutGuide key="safeArea" id="Jmo-C9-HHV"/>
                     </view>
                     <connections>
-                        <outlet property="characterImageView" destination="dPc-YS-Spj" id="AGx-eH-ErS"/>
+                        <outlet property="characterImageView" destination="2GM-Tr-2aJ" id="PMv-Jl-PFX"/>
                         <outlet property="detailsLabel" destination="7Lh-SJ-2ss" id="Qe3-tA-eQh"/>
+                        <outlet property="mainView" destination="o3E-rA-cDk" id="AcQ-YA-Xhd"/>
                         <outlet property="nameLabel" destination="dud-2n-7qc" id="qkE-ck-db8"/>
                         <outlet property="viewWikiButton" destination="mYd-Gr-LBy" id="20k-3a-0Pj"/>
                     </connections>

@@ -46,6 +46,8 @@
 		9A3E17E621E8E66C004CB826 /* Locale+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3E17E421E8E66C004CB826 /* Locale+Extensions.swift */; };
 		9A3E17E721E8E66C004CB826 /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3E17E521E8E66C004CB826 /* DateFormatter+Extensions.swift */; };
 		9A3E17E921E8E815004CB826 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3E17E821E8E815004CB826 /* Date+Extensions.swift */; };
+		9A3E17EB21EDE34F004CB826 /* EFImageViewZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3E17EA21EDE34E004CB826 /* EFImageViewZoom.swift */; };
+		9A3E17ED21EDE5D6004CB826 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3E17EC21EDE5D6004CB826 /* UIColor+Extensions.swift */; };
 		AADE705BCB29492C80958AE5 /* Pods_MarvelCharactersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D753A9BFAB9A9B1B42BF256 /* Pods_MarvelCharactersUITests.framework */; };
 		EC29639F4AB897C3A0BBA92A /* Pods_MarvelCharactersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29CE4AAC6427C646CC38EADB /* Pods_MarvelCharactersTests.framework */; };
 /* End PBXBuildFile section */
@@ -118,6 +120,8 @@
 		9A3E17E421E8E66C004CB826 /* Locale+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Locale+Extensions.swift"; sourceTree = "<group>"; };
 		9A3E17E521E8E66C004CB826 /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
 		9A3E17E821E8E815004CB826 /* Date+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		9A3E17EA21EDE34E004CB826 /* EFImageViewZoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EFImageViewZoom.swift; sourceTree = "<group>"; };
+		9A3E17EC21EDE5D6004CB826 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		AEF8E667E96D1F4F42F48AF2 /* Pods-MarvelCharactersUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelCharactersUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelCharactersUITests/Pods-MarvelCharactersUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BB3B931AF8A16B3EE461908A /* Pods-MarvelCharactersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelCharactersTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelCharactersTests/Pods-MarvelCharactersTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FEB3348CCC2C9F843F8D1D8A /* Pods-MarvelCharactersUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelCharactersUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelCharactersUITests/Pods-MarvelCharactersUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -278,6 +282,7 @@
 				9A3E17E521E8E66C004CB826 /* DateFormatter+Extensions.swift */,
 				9A3E17E821E8E815004CB826 /* Date+Extensions.swift */,
 				9A3E17E421E8E66C004CB826 /* Locale+Extensions.swift */,
+				9A3E17EC21EDE5D6004CB826 /* UIColor+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -296,6 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				9A28368821E644DF00C690B5 /* LoadingHUD.swift */,
+				9A3E17EA21EDE34E004CB826 /* EFImageViewZoom.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -558,6 +564,7 @@
 				9A28368921E644DF00C690B5 /* LoadingHUD.swift in Sources */,
 				9A28369521E7795300C690B5 /* CharacterCell.swift in Sources */,
 				9A28368021E63FF100C690B5 /* UIAlertViewController+Extensions.swift in Sources */,
+				9A3E17ED21EDE5D6004CB826 /* UIColor+Extensions.swift in Sources */,
 				9A28366F21E6180200C690B5 /* String+Extensions.swift in Sources */,
 				9A28365D21E5F58600C690B5 /* NetworkServiceManager.swift in Sources */,
 				9A28368B21E6450600C690B5 /* UIViewExtensions.swift in Sources */,
@@ -582,6 +589,7 @@
 				9A28366421E5FB0600C690B5 /* Alamofire+Extensions.swift in Sources */,
 				9A3E17D421E8C0C5004CB826 /* WikiViewController.swift in Sources */,
 				9A28362521E4DB4700C690B5 /* AppDelegate.swift in Sources */,
+				9A3E17EB21EDE34F004CB826 /* EFImageViewZoom.swift in Sources */,
 				9A3E17E621E8E66C004CB826 /* Locale+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

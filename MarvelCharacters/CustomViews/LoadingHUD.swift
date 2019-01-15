@@ -1,11 +1,3 @@
-//
-//  LoadingHUD.swift
-//  DGGOApp
-//
-//  Created by John Blanco on 4/19/18.
-//  Copyright © 2018 Dollar General. All rights reserved.
-//
-
 import UIKit
 import Lottie
 
