@@ -13,20 +13,19 @@ import AlamofireObjectMapper
 import ReactiveSwift
 import MapKit
 
-class NetworkServiceManager: NSObject {
+class NetworkServiceManager {
     
     static let sharedInstance: NetworkServiceManager = NetworkServiceManager()
     
     let sessionManager: SessionManager!
     
-    private override init() {
+    private init() {
         let sessionConfiguration = URLSessionConfiguration.default
         var serverTrustPolicies: [String: ServerTrustPolicy] = [:]
         if let url = URL(string: Constants.baseUrl), let host = url.host {
             serverTrustPolicies = [host: ServerTrustPolicy.disableEvaluation]
         }
         sessionManager = SessionManager(configuration: sessionConfiguration, serverTrustPolicyManager: ServerTrustPolicyManager(policies: serverTrustPolicies))
-        super.init()
     }
     func fetchCharacters(characterListMap: CharacterListMap, limit: Int, offset: Int) -> SignalProducer<CharacterListMap, ServiceResponseError> {
         return SignalProducer { [weak self] (observer, _) in

@@ -1,12 +1,12 @@
 import Foundation
 import RealmSwift
 
-class RealmHelper: NSObject {
+class RealmHelper {
 
     let realm: Realm
     static let sharedInstance = RealmHelper()
 
-    private override init() {
+    private init() {
         let config = Realm.Configuration(
             schemaVersion: 0,
             deleteRealmIfMigrationNeeded: true

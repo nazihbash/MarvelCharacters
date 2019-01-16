@@ -11,11 +11,11 @@ import RealmSwift
 import ReactiveSwift
 import ObjectMapper
 
-class CharactersDataManager: NSObject {
+class CharactersDataManager {
 
     public static let sharedInstance : CharactersDataManager = CharactersDataManager()
 
-    private override init() {
+    private init() {
         let dateFormatter = DateFormatter.defaultDateFormatter
         if let date = dateFormatter.date(from:UserDefaults.standard.charactersLastUpdatedTime) {
             let diff = date.differenceInDaysFromNow()

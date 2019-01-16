@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 import Lottie
 
-public class ProgressAnimationHelper: NSObject {
+public class ProgressAnimationHelper {
 
     static let sharedInstance: ProgressAnimationHelper = ProgressAnimationHelper()
     var currentAnimationView: LoadingHUD?

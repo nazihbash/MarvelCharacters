@@ -9,15 +9,13 @@
 import Foundation
 import Reachability
 
-class NetworkReachabiltyHelper: NSObject {
+class NetworkReachabiltyHelper {
     var reachability: Reachability! = Reachability()
     var alert: UIAlertController?
     
     static let sharedInstance: NetworkReachabiltyHelper = NetworkReachabiltyHelper()
     
-    private override init() {
-        super.init()
-        
+    private init() {
         reachability.whenUnreachable = { [weak self] _ in
             guard let `self` = self else { return }
             self.showNoNetworkDialog()
